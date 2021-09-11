@@ -14,77 +14,96 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/prv_week"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:background="@drawable/custom_button"
+                    android:text="&lt;"
+                    android:textColor="@color/black" />  <!--entity code , creates a less then sign-->
+
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+
+                    <RadioButton
+                        android:id="@+id/monday"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_button"
+                        android:button="@drawable/custom_button"
+                        android:checked="true"
+                        android:text="M"
+                        android:textAlignment="center" />
+
+                    <RadioButton
+                        android:id="@+id/tuesday"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_button"
+                        android:button="@drawable/custom_button"
+                        android:text="T"
+                        android:textAlignment="center" />
+
+                    <RadioButton
+                        android:id="@+id/wednesday"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_button"
+                        android:button="@drawable/custom_button"
+                        android:text="W"
+                        android:textAlignment="center" />
+
+                    <RadioButton
+                        android:id="@+id/thursday"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_button"
+                        android:button="@drawable/custom_button"
+                        android:text="T"
+                        android:textAlignment="center" />
+
+                    <RadioButton
+                        android:id="@+id/friday"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_button"
+                        android:button="@drawable/custom_button"
+                        android:text="F"
+                        android:textAlignment="center" />
+                </RadioGroup>
+
+                <Button
+                    android:id="@+id/next_week"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:background="@drawable/custom_button"
+                    android:text=">"
+                    android:textColor="@color/black" />
+            </LinearLayout>
 
             <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
+                android:id="@+id/day_text"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="TextView" />
+                android:text="Monday September 6th"
+                android:textAlignment="center"
+                android:textSize="20sp" />
 
-            <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:srcCompat="@android:drawable/checkbox_off_background" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/prv_week"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="&lt;" />  <!--entity code , creates a less then sign-->
-
-
-            <Button
-                android:id="@+id/monday"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="2" />
-
-            <Button
-                android:id="@+id/tuesday"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="3" />
-
-            <Button
-                android:id="@+id/wednesday"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="4" />
-
-            <Button
-                android:id="@+id/thursday"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="5" />
-
-            <Button
-                android:id="@+id/friday"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="6" />
-
-            <Button
-                android:id="@+id/next_week"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text=">" />
         </LinearLayout>
 
         <ScrollView
