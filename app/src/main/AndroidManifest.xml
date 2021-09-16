@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DriversBooking">
         <activity
+            android:name=".ConfirmationScreen"
+            android:exported="true" />
+        <activity
+            android:name=".StartScreen"
+            android:exported="true" />
+        <activity
+            android:name=".BookingForm"
+            android:exported="true" />
+        <activity
             android:name=".HourScreen"
             android:exported="true" />
         <activity

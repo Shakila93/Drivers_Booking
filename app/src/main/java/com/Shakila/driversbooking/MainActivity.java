@@ -4,6 +4,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -11,6 +12,7 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private Button PrevButton;
     private Button NextButton;
     private int month;
+    private int day;
     private int startDate;
     private Map<Integer, TextView> Buttons;
     private Manager manager;
@@ -83,11 +86,12 @@ public class MainActivity extends AppCompatActivity {
         Buttons.put(16, findViewById(R.id.sixteenpmtext));
 
         for(int i = 9; i<16; i++){
-            Buttons.get(i).setOnClickListener(view ->gotoHour(i));
+            int finalI = i;
+            Buttons.get(i).setOnClickListener(view ->gotoHour(finalI));
 
         }
 
-        setDate(0);
+        setDate(0); //set to monday
     }
 
     private void moveWeek(int i) {
@@ -101,9 +105,12 @@ public class MainActivity extends AppCompatActivity {
     }
     private void setDate(int modifier){
         String postfix = "";
-        DayText.setText(String.format(Locale.US, "%s, %s %d%s", days[modifier],months[month], startDate+modifier, postfix));
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(2021,month, startDate+modifier, 0, 0);
+        SimpleDateFormat dtf = new SimpleDateFormat("E, MMM d");
+        DayText.setText(dtf.format(calendar.getTime()));
 
-
+        this.day = startDate+modifier;
         Date date = new Date(2021, month, startDate + modifier);
         Day day = manager.getDate(date);
         if(day != null){
@@ -132,6 +139,14 @@ public class MainActivity extends AppCompatActivity {
     }
     //takes user the to the selected hour screen
     private void gotoHour(int hour){
+        Intent intent = new Intent(this, HourScreen.class);
+        Bundle bundle = new Bundle(3);
+        bundle.putInt("month", month);
+        bundle.putInt("day", day);
+        bundle.putInt("hour", hour);
+        intent.putExtras(bundle);
+
+        startActivity(intent);
 
     }
 
