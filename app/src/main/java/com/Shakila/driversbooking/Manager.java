@@ -11,7 +11,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Manager {
-    private Map<Date, Day> Dates;
+    private String[] teachers = {
+            "Matt Johnson", "Jane Doe", "Mary Popin", "James Honors", "Stacy Robertson", "Harry Woods", "Robecca Poper", "Leo Johns", "Adam Rob", "Collin Doe"
+    };
+    private Map<String, Day> Dates;
     private static Manager instance;
     public static Manager getInstance(){
         if(instance == null){
@@ -26,7 +29,7 @@ public class Manager {
         Dates = new HashMap<>();
     }
 
-    public Day getDate(Date date) {
+    public Day getDate(String date) {
         if(Dates.containsKey(date)){
             return Dates.get(date);
         }
@@ -45,5 +48,13 @@ public class Manager {
         SharedPreferences preferences= activity.getPreferences(Context.MODE_PRIVATE);
         Dates = (new Gson()).fromJson(preferences.getString("data", "{}"), Dates.getClass());
 
+    }
+
+    public void setDate(String date, Day daySlot) {
+        Dates.put(date,daySlot);
+    }
+
+    public String[] getTeachers() {
+        return teachers;
     }
 }

@@ -13,7 +13,7 @@
             android:name=".ConfirmationScreen"
             android:exported="true" />
         <activity
-            android:name=".StartScreen"
+            android:name=".MainActivity"
             android:exported="true" />
         <activity
             android:name=".BookingForm"
@@ -22,7 +22,7 @@
             android:name=".HourScreen"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".StartScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

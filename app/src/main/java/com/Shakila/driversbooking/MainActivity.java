@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
             
     };
     @Override
+    //setting up all the views
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -106,13 +107,13 @@ public class MainActivity extends AppCompatActivity {
     private void setDate(int modifier){
         String postfix = "";
         Calendar calendar = Calendar.getInstance();
-        calendar.set(2021,month, startDate+modifier, 0, 0);
+        calendar.set(2021,month, startDate+modifier, 0, 0, 0);
         SimpleDateFormat dtf = new SimpleDateFormat("E, MMM d");
+        SimpleDateFormat ymd = new SimpleDateFormat("YYYY-MM-dd");
         DayText.setText(dtf.format(calendar.getTime()));
 
         this.day = startDate+modifier;
-        Date date = new Date(2021, month, startDate + modifier);
-        Day day = manager.getDate(date);
+        Day day = manager.getDate(ymd.format(calendar.getTime()));
         if(day != null){
             int slot = 0;
             //setting the slots to be number of available slots

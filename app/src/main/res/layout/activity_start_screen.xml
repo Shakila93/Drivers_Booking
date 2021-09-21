@@ -6,4 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".StartScreen">
 
+    <Button
+        android:id="@+id/startbutton"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:background="@drawable/round_button"
+        android:text="Tap To Start"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
