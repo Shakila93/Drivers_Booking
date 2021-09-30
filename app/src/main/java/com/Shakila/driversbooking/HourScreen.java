@@ -68,9 +68,12 @@ public class HourScreen extends AppCompatActivity {
         teacherText[9] = findViewById(R.id.teacher10);
         String [] Teachers = Manager.getInstance().getTeachers();
         Day dateObj = Manager.getInstance().getDate(ymd.format(calendar.getTime()));
-        Hour hourObj = new Hour();
+        Hour hourObj = null;
         if(dateObj != null){
             hourObj = dateObj.getHour(hour);
+        }
+        if(hourObj == null){
+            hourObj = new Hour();
         }
 
         for(int i = 0; i < 10; i++){
@@ -88,9 +91,6 @@ public class HourScreen extends AppCompatActivity {
 
         }
 
-
-
-
     }
     private void gotoBooking(int teacherId){
         Intent intent = new Intent(this, BookingForm.class);
@@ -100,5 +100,6 @@ public class HourScreen extends AppCompatActivity {
         intent.putExtras(bundle);
 
         startActivity(intent);
+        finish();
     }
 }

@@ -1,6 +1,7 @@
 package com.Shakila.driversbooking;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -24,5 +25,9 @@ public class Hour {
             return Slots.get(name);
         }
         return null;
+    }
+        //return all the timeslots in this hour
+    public Collection<? extends TimeSlot> getAll() {
+        return  Slots.values();
     }
 }

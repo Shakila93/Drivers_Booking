@@ -15,5 +15,7 @@ public class StartScreen extends AppCompatActivity {
         Button startbutton = findViewById(R.id.startbutton);
         startbutton.setOnClickListener(view -> startActivity(new Intent(this, MainActivity.class)));
         Manager.getInstance().LoadData(this);
+
+        findViewById(R.id.view_histogram).setOnClickListener(View -> startActivity(new Intent(this, Histogram.class)));
     }
 }

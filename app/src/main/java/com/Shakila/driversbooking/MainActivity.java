@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -40,7 +41,19 @@ public class MainActivity extends AppCompatActivity {
     };
     private final String[] days = {
             "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"
-            
+    };
+    private final Color[] heatMap = {
+            Color.valueOf(0.03f, 0.58f,0.12f),
+            Color.valueOf(0.27f, 0.92f, 0.19f),
+            Color.valueOf(0.43f, 0.98f, 0.02f),
+            Color.valueOf(0.72f, 0.98f,  0.02f),
+            Color.valueOf(0.98f, 0.78f,  0.02f),
+            Color.valueOf(0.98f, 0.94f,  0.02f),
+            Color.valueOf(0.98f, 0.58f,  0.02f),
+            Color.valueOf(0.98f, 0.41f,  0.02f),
+            Color.valueOf(0.98f, 0.32f,  0.02f),
+            Color.valueOf(0.98f, 0.23f,  0.02f),
+            Color.valueOf(0.98f,  0.02f,  0.02f)
     };
     @Override
     //setting up all the views
@@ -120,10 +133,13 @@ public class MainActivity extends AppCompatActivity {
             for(int hour = 9;hour <17; hour ++){
                 Hour hourObject = day.getHour(hour);
                 if(hourObject == null){
+                    Buttons.get(hour).setBackgroundColor(heatMap[0].toArgb());
                     Buttons.get(hour).setText("Available");
                     continue;
                 }
                 int count = hourObject.getCount();
+                //gets the hour and set their background color according to the heatmap instruction
+                Buttons.get(hour).setBackgroundColor(heatMap[count].toArgb());
                 Buttons.get(hour).setText("Booked");
                 if(count < 10){
                     //we are available
@@ -148,6 +164,7 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtras(bundle);
 
         startActivity(intent);
+        setDate(day-startDate);
 
     }
 

@@ -76,9 +76,10 @@ public class ConfirmationScreen extends AppCompatActivity {
             daySlot.setHour(hour, hourSlot);
             manager.setDate(ymd.format(calendar.getTime()),daySlot);
             manager.SaveData(thisActivity);
-            Intent gotoMain = new Intent(thisActivity, MainActivity.class);
+            /* gotoMain = new Intent(thisActivity, MainActivity.class);
             gotoMain.putExtras(intent.getExtras());
-            startActivity(gotoMain);
+            startActivity(gotoMain);*/
+            finish();
         });
     }
 }

@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Histogram">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/histogram_monday"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Monday"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/histogram_tuesday"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Tuesday"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/histogram_wednesday"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Wednesday"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/histogram_thursday"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Thursday"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/histogram_friday"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Friday"
+                    android:textAlignment="center" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/histogram_monday_09am"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="09:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_monday_10am"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="10:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_monday_11am"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="11:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_monday_12pm"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="12:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_monday_13pm"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="13:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_monday_14pm"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="14:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_monday_15pm"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="15:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_monday_16pm"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="16:00" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/histogram_tuesday_09am"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="09:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_tuesday_10am"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="10:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_tuesday_11am"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="11:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_tuesday_12pm"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="12:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_tuesday_13pm"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="13:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_tuesday_14pm"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="14:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_tuesday_15pm"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="15:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_tuesday_16pm"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="16:00" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/histogram_wednesday_09am"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="09:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_wednesday_10am"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="10:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_wednesday_11am"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="11:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_wednesday_12pm"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="12:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_wednesday_13pm"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="13:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_wednesday_14pm"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="14:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_wednesday_15pm"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="15:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_wednesday_16pm"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="16:00" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/histogram_thursday_09am"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="09:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_thursday_10am"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="10:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_thursday_11am"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="11:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_thursday_12pm"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="12:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_thursday_13pm"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="13:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_thursday_14pm"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="14:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_thursday_15pm"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="15:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_thursday_16pm"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="16:00" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/histogram_friday_09am"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="09:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_friday_10am"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="10:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_friday_11am"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="11:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_friday_12pm"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="12:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_friday_13pm"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="13:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_friday_14pm"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="14:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_friday_15pm"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="15:00" />
+
+                    <TextView
+                        android:id="@+id/histogram_friday_16pm"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="16:00" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

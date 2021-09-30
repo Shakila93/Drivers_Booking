@@ -59,6 +59,7 @@ public class BookingForm extends AppCompatActivity {
             Intent gotoConfirmation = new Intent(thisActivity, ConfirmationScreen.class);
             gotoConfirmation.putExtras(bundle);
             startActivity(gotoConfirmation);
+            finish();
 
 
 
