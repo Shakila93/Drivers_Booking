@@ -9,10 +9,12 @@ import android.widget.Button;
 public class StartScreen extends AppCompatActivity {
 
     @Override
+    //binds button for the main app and histigrom , allows to tansition between the activites
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_screen);
         Button startbutton = findViewById(R.id.startbutton);
+        //
         startbutton.setOnClickListener(view -> startActivity(new Intent(this, MainActivity.class)));
         Manager.getInstance().LoadData(this);
 

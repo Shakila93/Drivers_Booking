@@ -49,6 +49,7 @@ public class BookingForm extends AppCompatActivity {
         final Activity thisActivity = this;
 
 
+            //sets up the info bundle to the manger and moves to confirmation screen.
         SubmitButton.setOnClickListener(view -> {
             Bundle bundle = intent.getExtras();
             bundle.putString("firstname", fNametext.getText().toString());

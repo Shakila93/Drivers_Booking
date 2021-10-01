@@ -36,12 +36,14 @@ public class MainActivity extends AppCompatActivity {
     private Map<Integer, TextView> Buttons;
     private Manager manager;
 
+    //string representation of months and days
     private final String[] months = {
             "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
     };
     private final String[] days = {
             "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"
     };
+    //colors representation our heat map based on the number of slots that are booked
     private final Color[] heatMap = {
             Color.valueOf(0.03f, 0.58f,0.12f),
             Color.valueOf(0.27f, 0.92f, 0.19f),
@@ -64,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.title_bar);
 
+    //binding, connecting to the visual component
         DayText = findViewById(R.id.day_text);
         MondayButton = findViewById(R.id.monday);
         TuesdayButton = findViewById(R.id.tuesday);
@@ -78,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
     month = date.get(Calendar.MONTH);
     date.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
     startDate = date.get(Calendar.DATE);
+    //sets the handlers , performs set date
         MondayButton.setOnClickListener(view -> setDate(0));
         TuesdayButton.setOnClickListener(view -> setDate(1));
         WednesdayButton.setOnClickListener(view -> setDate(2));
@@ -107,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
 
         setDate(0); //set to monday
     }
-
+//changes the dates forword by week, reset the buttons
     private void moveWeek(int i) {
         startDate += i*7;
         MondayButton.setChecked(true);
@@ -117,6 +121,7 @@ public class MainActivity extends AppCompatActivity {
         FridayButton.setChecked(false);
         setDate(0);
     }
+    //getting information for calender from mamnger class and setting up the calender obj to allow for the next stage
     private void setDate(int modifier){
         String postfix = "";
         Calendar calendar = Calendar.getInstance();
@@ -125,6 +130,7 @@ public class MainActivity extends AppCompatActivity {
         SimpleDateFormat ymd = new SimpleDateFormat("YYYY-MM-dd");
         DayText.setText(dtf.format(calendar.getTime()));
 
+        //getting the slots info, by the hour
         this.day = startDate+modifier;
         Day day = manager.getDate(ymd.format(calendar.getTime()));
         if(day != null){
@@ -162,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
         bundle.putInt("day", day);
         bundle.putInt("hour", hour);
         intent.putExtras(bundle);
-
+    // goes to the next activity and once finish reload the data
         startActivity(intent);
         setDate(day-startDate);
 

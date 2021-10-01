@@ -37,7 +37,7 @@ public class ConfirmationScreen extends AppCompatActivity {
         licenceVersionText = findViewById(R.id.confirmation_licenceversion);
         confirm = findViewById(R.id.confirmation_button);
 
-
+    //Setting the confirmation values
         final Intent intent = getIntent();
         int month = intent.getIntExtra("month", 0);
         int day =intent.getIntExtra("day", 0);
